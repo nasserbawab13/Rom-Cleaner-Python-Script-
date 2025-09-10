@@ -1,15 +1,15 @@
-# Rom-Cleaner-Python-Script-
-Python script for cleaning ROM collections. Removes duplicates while keeping best versions based on region/build quality. USA-first priority, supports all systems (NES-Switch), 40+ file formats. Preview mode, cross-platform. Made for my overly large ROM collection. MIT license.
+# Rom-Cleaner-Python-Script
 
+brief: Python script for cleaning ROM collections. Removes duplicates while keeping best versions based on region/build quality. USA-first priority, supports all systems (NES-Switch), 40+ file formats. Preview mode, cross-platform. Made for my overly large ROM collection. MIT license.
+.............................................................................
 
-Hello everyone! I made this script to clean up my own massive ROM collection (15,000+ games with tons of duplicates), and figured it might be useful for others dealing with the same problem. After spending way too much time manually sorting through “Game (USA).zip vs Game (Europe) (Rev 1).zip” files, I decided automating the whole process is definitely far simpler and am honestly surprised on the little tools we have for ROMset cleaning.
+Hello everyone! I made this script to clean up my own massive ROM collection (10,000+ games with tons of duplicates), and figured it might be useful for others dealing with the same problem. After spending way too much time manually sorting through “Game (USA).zip vs Game (Europe) (Rev 1).zip” files, I decided automating the whole process is definitely far simpler and am honestly surprised on the little tools we have for ROMset cleaning.
 
 its a python script that carefully removes duplicate ROMs from your collection while preserving the best versions based on my own regional preference, build quality, and revision priority. 
-…………………………………………………………………………
 
-{ Features } 
+# { Features } 
 
-# By default USA-First Region Priority 🇺🇸
+- By default USA-First Region Priority 🇺🇸
 
 - Designed primarily for English speakers
 
@@ -20,16 +20,15 @@ its a python script that carefully removes duplicate ROMs from your collection w
 - Perfect for North American collectors who only want English ROMs
 
 - Keeps your preferred language/region versions consistently
-…………………………………………………………………………
-#Duplicate Detection 🙅‍♂️
+# Duplicate Detection 🙅‍♂️
 
 - Groups ROMs by base game title (ignoring regional/version tags)
 
 - Treats special editions as separate games (GameCube Edition, Virtual Console, Limited Run Games, etc.)
 
 - Handles multi-disc games properly (keeps all discs of a set)
-…………………………………………………………………………
-#Careful Version Ranking 🆚
+  
+# Careful Version Ranking 🆚
 
 Priority Order;
 1. Special Editions GameCube Edition, Virtual Console)
@@ -39,8 +38,8 @@ Priority Order;
 3. Region Preference (USA → Europe → UK → Others)
 
 4. Version Numbers (Higher versions preferred)
-…………………………………………………………………………
-#Conservative Approach 🛡️
+
+# Conservative Approach 🛡️
 
 - Maximum 2 ROMs per game: Best version + Original (if different)
 
@@ -55,8 +54,8 @@ Priority Order;
 - Multi-disc support
 
 - never breaks up disc sets
-…………………………………………………………………………
-Supported Systems:
+
+# Supported Systems:
 
 Works with all gaming systems and file formats
 
@@ -70,8 +69,8 @@ PlayStation 1-2
 - All formats: ROM files, disc images, compressed archives
 
 File Extensions: `.nes`, `.smc`, `.iso`, `.zip`, `.7z`, `.chd`, `.wbfs`, `.nsp`, `.xci`, and 40+ more
-…………………………………………………………………………
-{ How It Works } 
+
+# { How It Works } 
 
 Example: Super Mario Bros Collection
 
@@ -103,7 +102,7 @@ After:
 ✅ Contra (USA).zip             [KEEP - USA priority]
 ```
 
-{ Prerequisites & System Requirements }
+# { Prerequisites & System Requirements }
 
 - Python 3.6 or higher (check with `python --version` or `python3 --version`)
 
@@ -113,7 +112,7 @@ After:
 
 - Permissions: Read/write access to your ROM directories
 
-{ !! Before You Start !! } 
+# { !! Before You Start !! } 
 
 1. BACKUP YOUR ROM COLLECTION - This script deletes files when enabled to TRUE 
 
@@ -121,13 +120,16 @@ After:
 
 This is what you’ll need to change
 Just one line at the top of the script:
+
+```
 ROM_DIR = '/path/to/your/roms' << UPDATE TO THE ROM DIRECTORY YOU WANT TO SCRAPE
+```
 
 3. Test on a small folder first - Try it on 10-20 ROMs before your full collection
 
 4. Check Python installation - Run `python --version` in terminal/command prompt
 
-{ Getting Python (if needed) }
+# { Getting Python (if needed) ver 3.6+ }
 
 - Windows: Download from [python.org](https://python.org) or Microsoft Store
 
@@ -137,13 +139,13 @@ ROM_DIR = '/path/to/your/roms' << UPDATE TO THE ROM DIRECTORY YOU WANT TO SCRAPE
 
 - Android: Install QPython 3 or Termux from Play Store
 
-{ File System Access }
+# { File System Access }
 
 - Make sure Python can access your ROM directory
 - On newer Android versions, you may need to grant storage permissions
 - Windows users: avoid OneDrive/cloud synced folders during processing
 
-{ Quick Start }
+# { Quick Start }
 
 1. Download the script
 
@@ -160,10 +162,10 @@ ROM_DIR = '/path/to/your/roms' << UPDATE TO THE ROM DIRECTORY YOU WANT TO SCRAPE
 4. Review the results, then enable deletion:
    
    ```python
-   DELETE_FILES = True  # Change this when ready
+   DELETE_FILES = True  # Change this when ready to delete  roms
    ```
 
-{ Customization }
+# { Customization }
 
 Region Preferences:
 
@@ -191,7 +193,7 @@ After cleanup: 1156 files
 Space saved: 54.4 MB
 ```
 
-{ Safety Features }
+# { Safety Features }
 
 -  Preview mode by default - never deletes without confirmation
 
@@ -213,15 +215,16 @@ Space saved: 54.4 MB
 
 - Storage optimization without losing important variants
 
-{ Tested Systems }
+# { Tested Systems }
 
 Successfully tested on:
 - MAME up to SWITCH collections (5000+ ROMs)
 - Multi-system RetroPie setups
 - Android devices (QPython)
 - Windows/Mac/Linux
-…………………………………………………………………………
 
-****⚠️ ⚠️⚠️⚠️IMPORTANT ⚠️⚠️⚠️***: Always backup your ROM collection before running with `DELETE_FILES = True`
+# **⚠️ IMPORTANT ⚠️**
+- Always backup your ROM collection before running with `DELETE_FILES = True`
 
 License: - Free to use and modify
+Please enjoy :)
