@@ -145,9 +145,9 @@ ROM_DIR = '/path/to/your/roms' << UPDATE TO THE ROM DIRECTORY YOU WANT TO SCRAPE
 - On newer Android versions, you may need to grant storage permissions
 - Windows users: avoid OneDrive/cloud synced folders during processing
 
-# { Quick Start }
+# { ✅ Quick Start ✅ }
 
-1. Download the script
+1. Download the Rom_Cleaner.py script in your preferred text editor (for android I recommend QPython3)
 
 2. Edit the path at the top:
    
@@ -159,12 +159,12 @@ ROM_DIR = '/path/to/your/roms' << UPDATE TO THE ROM DIRECTORY YOU WANT TO SCRAPE
    ```bash
    python rom_cleaner.py
    ```
-4. Review the results, then enable deletion:
-   
+4. Run to review your results, then go back and edit the file again to enable deletion if satisfied:
+
    ```python
    DELETE_FILES = True  # Change this when ready to delete  roms
    ```
-
+   
 # { Customization }
 
 Region Preferences:
